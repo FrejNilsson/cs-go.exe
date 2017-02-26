@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>FrostGuards</title>
+<link rel="stylesheet" href="style.css" type="text/css">
+<link rel="stylesheet" href="animate.css" type="text/css">
+<link href="https://fonts.googleapis.com/css?family=Orbitron" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css?family=Teko" rel="stylesheet">
+</head>
+<body>
+<div id="bg-pattern"></div>
+<div id="bg-darker"></div>
+<div id="center">
+<p id="txt_story">
+<script>
+var story = "Enter username: Frost <br/> Enter password: ******** <br/> Welcome back Frost! <br/> Selected: Counter-Strike: Global Offensive <br/> Searching for CSGO.exe... <br/> Injecting.. <br/> OK.";
+
+		var counter = 0;
+		
+		var txt_story = document.getElementById("txt_story");
+		
+		var counterID = setInterval( doTypewriter, 50  );
+		//
+		function doTypewriter( ){
+				
+			var str = story.substr(0, counter);//substr( start position, totalchars );
+			//trace(str);
+			//txt_story.text = str;
+			txt_story.innerHTML = str;
+			
+			counter++;
+			//trace( story.length );
+			if ( counter >=  story.length ) {
+				clearInterval( counterID );
+			}
+		}
+</script>
+</p>
+</div>
+</div>
+<video autoplay loop id="player">
+		<source src="O PANA!.mp4" type="video/mp4" />
+</video>
+<audio autoplay loop>
+      <source src="mango.mp4#t=13">
+         <script>
+        var video = document.currentScript.parentElement;
+        video.volume = 0.15;
+        </script>
+</audio>
+</body>
+</html>
